@@ -23,7 +23,7 @@ RUN apt-get update && \
 
 # added dos2unix for compatibility when starting docker with wsl2
 
-RUN curl -sL "https://raw.githubusercontent.com/FezVrasta/ark-server-tools/v1.6.62/netinstall.sh" | bash -s steam && \
+RUN curl -sL "https://raw.githubusercontent.com/Gornoka/ark-server-tools/fix/quick/reduce_lsof_load/netinstall.sh" | bash -s steam && \
     ln -s /usr/local/bin/arkmanager /usr/bin/arkmanager &&\
     ln -s   /home/steam/steamcmd /usr/local/bin
 
