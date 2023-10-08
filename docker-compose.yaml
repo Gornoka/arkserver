@@ -34,7 +34,10 @@ services:
      - "7777:7777/udp" # second ark server port
      - "7778:7778/udp" # "host:container"
      - "27015:27015/udp"# steam  query port
-     
+    ulimits:
+      nofile:
+        soft: 10000
+        hard: 10000
 volumes:
   steam:
   
