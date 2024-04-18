@@ -159,3 +159,4 @@ Inside the `/ark` volume there are several directories containing server related
 | /ark/log     | Location of the arkmanager and arkserver log files                                                                                       |
 | /ark/server  | Location of the server installation performed by `steamcmd`. This will contain the ShooterGame directory and the actual server binaries. |
 | /ark/staging | Default directory for staging game and mod updates. Can be changed using in `arkmanager.cfg`                                             |
+
