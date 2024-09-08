@@ -11,7 +11,7 @@ echo "# Ark Server - " `date`
 echo "###########################################################################"
 
 echo "Ensuring correct permissions..."
-sudo find /ark -not -user steam -o -not -group steam -exec chown -v steam:steam {} \; 
+sudo find /ark -not -user steam -o -not -group steam -exec chown -v steam:steam {} \;
 sudo find /home/steam -not -user steam -o -not -group steam -exec chown -v steam:steam {} \;
 
 # Remove arkmanager tracking files if they exist

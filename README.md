@@ -1,5 +1,5 @@
 ![Latest Docker Build](https://img.shields.io/github/actions/workflow/status/gornoka/arkserver/docker-build.yaml)
-![Docker Pulls](https://img.shields.io/docker/pulls/gornoka/arkserver) 
+![Docker Pulls](https://img.shields.io/docker/pulls/gornoka/arkserver)
 [![License](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](https://github.com/gornoka/arkserver/blob/master/LICENSE)
 
 
@@ -10,7 +10,7 @@ Docker image for a dedicated ARK Server with ARK manager.
 
 ## Overview
 
-This is an image for running an ARK: Survival Evolved server in a Docker container, 
+This is an image for running an ARK: Survival Evolved server in a Docker container,
 and some compose files to make cluster hosting easier.
 
 This is based upon the work of [thmhoag](https://github.com/thmhoag/arkserver).
@@ -65,17 +65,17 @@ $ docker run -d \
 If the exposed ports are modified (in the case of multiple containers/servers on the same host) the `arkmanager` config will need to be modified to reflect the change as well. This is required so that `arkmanager` can properly check the server status and so that the ARK server itself can properly publish its IP address and query port to steam.
 
 ### Running with Docker compose
-clone the repository 
+clone the repository
 ```bash
-git clone https://github.com/gornoka/arkserver   
+git clone https://github.com/gornoka/arkserver
 ```
-before running the server it is advised that you check the configuration, 
-especially the volume mappings inside the container, 
+before running the server it is advised that you check the configuration,
+especially the volume mappings inside the container,
 since the downloaded files are very big.
 
 Treat this compose file as an example, you can create your own compose files from this one.
 To run multiple Ark servers on one server you can create multiple services in the compose file.
-Change ports and volume mappings accordingly. 
+Change ports and volume mappings accordingly.
 There is an example for this in the [cluster compose file](./docker-compose-cluster.yaml).
 
 
@@ -84,11 +84,11 @@ There is an example for this in the [cluster compose file](./docker-compose-clus
 # changing to the new directory
 cd arkserver
 # start server interactively (shuts down when console is closed)
-docker compose up 
-# start server and run in background 
+docker compose up
+# start server and run in background
 docker compose up -d
 ```
-This server now operates with default parameters, to change those open the 
+This server now operates with default parameters, to change those open the
 [docker compose file](/docker-compose.yaml) and adapt the parameters to your needs.
 After that, you can run the server again with the start command of your liking
 
@@ -135,7 +135,7 @@ A set of required environment variables have default values provided as part of 
 
 ### Adding Additional Variables
 
-Any configuration value that is available via `arkmanager` can be set using an environment variable. This works by taking any environment variable on the container that is prefixed with `am_` and mapping it to the corresponding environment variable in the `arkmanager.cfg` file. 
+Any configuration value that is available via `arkmanager` can be set using an environment variable. This works by taking any environment variable on the container that is prefixed with `am_` and mapping it to the corresponding environment variable in the `arkmanager.cfg` file.
 
 For a complete list of configuration values available, please see [FezVrasta](https://github.com/FezVrasta)'s great documentation here: [arkmanager Configuration Files](https://github.com/FezVrasta/ark-server-tools#configuration-files)
 
@@ -159,4 +159,3 @@ Inside the `/ark` volume there are several directories containing server related
 | /ark/log     | Location of the arkmanager and arkserver log files                                                                                       |
 | /ark/server  | Location of the server installation performed by `steamcmd`. This will contain the ShooterGame directory and the actual server binaries. |
 | /ark/staging | Default directory for staging game and mod updates. Can be changed using in `arkmanager.cfg`                                             |
-
