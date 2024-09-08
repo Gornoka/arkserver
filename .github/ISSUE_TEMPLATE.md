@@ -5,19 +5,19 @@
 ## Image Setup Details
 
 <!-- The Docker image tag of thmhoag/arkserver being used -->
-* **Image Tag**: 
+* **Image Tag**:
 <!-- The operating system of the host machine the container is running on (Windows/Mac/Linux).
      Please include the Linux distribution if applicable. -->
-* **Docker Host OS**: 
+* **Docker Host OS**:
 <!-- Docker Run command being used, or the docker-compose.yml file being used if Docker Compose
      is being used to run the container. -->
-* **`docker run` command or `docker-compose.yml` file**: 
+* **`docker run` command or `docker-compose.yml` file**:
     ```
     version: '3'
 
     services:
     your-compose-file-here:
-        image: thmhoag/arkserver:0.0.0
+        image: gornoka/arkserver:0.0.0
     ```
 
 ## Description of Issue

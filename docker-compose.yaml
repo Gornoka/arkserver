@@ -8,7 +8,7 @@ services:
     volumes:
       - "steam:/home/steam/Steam"
       - "./ark_server_data_on_host:/ark" # ensure that the docker user has write rwx (7) permissions in this folder
-   
+
     command: [/home/steam/run.sh]
     env_file: .env # use this file if you want to use other params shared between multiple instances or just to reduce the docker compose size
     environment:
@@ -24,7 +24,7 @@ services:
       am_arkflag_crossplay: "false" #Allow crossyplay with Players on Epic
       # for additional options check ./arkmanager/arkmanager.cfg
       # example adding mods:
-      #am_ark_GameModIds: "2508593144,731604991,1941328406,849372965" 
+      #am_ark_GameModIds: "2508593144,731604991,1941328406,849372965"
     restart: unless-stopped
     ports: # change ports here in case you wish to use different ports and or multiple servers in parrallel
      - "7777:7777" # second ark server port
@@ -40,4 +40,3 @@ services:
         hard: 10000
 volumes:
   steam:
-  
