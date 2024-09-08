@@ -17,7 +17,7 @@
 
     services:
     your-compose-file-here:
-        image: thmhoag/arkserver:0.0.0
+        image: gornoka/arkserver:0.0.0
     ```
 
 ## Description of Issue
